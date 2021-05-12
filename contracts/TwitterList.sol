@@ -31,12 +31,4 @@ contract TwitterList {
         delete tweets[_id];
         emit TwitterDeleted(_id);
     }
-
-    function getTweetById(int256 _id)
-        public
-        view
-        returns (int256 id, string memory txt)
-    {
-        return (tweets[_id].id, tweets[_id].txt);
-    }
 }

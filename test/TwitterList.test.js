@@ -13,11 +13,10 @@ contract("TweetList", function ([]) {
       let txt = "It is going to rain today";
 
       // when
-      await this.tweetList.insertTweet(txt);
+      result = await this.tweetList.insertTweet(txt);
 
       // then
-      const tweet = await this.tweetList.getTweetById(1);
-      tweet.txt.should.equal(txt);
+      assert.equal(result.logs[0].args.txt, txt);
     });
   });
 
@@ -29,11 +28,10 @@ contract("TweetList", function ([]) {
       await this.tweetList.insertTweet(txt);
 
       //when
-      await this.tweetList.updateTweet(1, updatedTweet);
-      const tweet = await this.tweetList.getTweetById(1);
+      result = await this.tweetList.updateTweet(1, updatedTweet);
 
       //then
-      tweet.txt.should.equal(updatedTweet);
+      assert.equal(result.logs[0].args.txt, updatedTweet);
     });
   });
 
@@ -42,20 +40,13 @@ contract("TweetList", function ([]) {
       // given
       let txt = "It is going to rain today";
       const result = await this.tweetList.insertTweet(txt);
-      //   console.log(tweet.logs[0].event);
 
-      console.log(result.logs[0].args.id.toNumber());
       //when
       const deletedResult = await this.tweetList.deleteTweet(
         result.logs[0].args.id.toNumber()
       );
-      //   console.log(deletedTweet.id);
 
       //then
-      //   deletedResult.logs[0].args.id
-      //     .toNumber()
-      //     .equal(result.logs[0].args.id.toNumber());
-
       assert.equal(
         deletedResult.logs[0].args.id.toNumber(),
         result.logs[0].args.id.toNumber()
