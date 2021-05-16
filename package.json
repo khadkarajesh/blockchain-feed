@@ -1,0 +1,26 @@
+{
+  "name": "blockchain-feed",
+  "version": "1.0.0",
+  "description": "Blockchain application built on Ethereum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khadkarajesh/blockchain-feed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khadkarajesh/blockchain-feed/issues"
+  },
+  "homepage": "https://github.com/khadkarajesh/blockchain-feed#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "lite-server": "^2.6.1",
+    "solc": "^0.8.4",
+    "truffle": "^5.3.5",
+    "truffle-contract": "^4.0.31"
+  }
+}
