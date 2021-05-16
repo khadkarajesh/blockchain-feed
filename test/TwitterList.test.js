@@ -15,6 +15,9 @@ contract("TweetList", function ([]) {
       // when
       result = await this.tweetList.insertTweet(txt);
 
+      data = await this.tweetList.tweets.call([1])
+      console.log(data)
+
       // then
       assert.equal(result.logs[0].args.txt, txt);
     });
