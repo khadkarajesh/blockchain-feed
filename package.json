@@ -18,9 +18,14 @@
   "homepage": "https://github.com/khadkarajesh/blockchain-feed#readme",
   "dependencies": {
     "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
     "lite-server": "^2.6.1",
     "solc": "^0.8.4",
     "truffle": "^5.3.5",
-    "truffle-contract": "^4.0.31"
+    "truffle-contract": "^4.0.31",
+    "truffle-hdwallet-provider": "^1.0.17"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.4.0"
   }
 }
