@@ -59,7 +59,7 @@ contract TwitterList {
     }
 
     /**
-     * @dev A function to delete tweet
+     * @dev A function to delete tweet by id
      * @param _id identifier of tweet
      */
     function deleteTweet(int256 _id) public {

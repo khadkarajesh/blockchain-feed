@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "npx solidity-docgen --solc-module solc-0.7"
+    "docs": "npx solidity-docgen --solc-module solc-0.7",
+    "migrate": "truffle migrate --network ropsten",
+    "docker:migrate": "docker-compose -p cz-migrate -f docker-compose.migrate.yaml up",
+    "docker:test": "docker-compose -p cz-tests -f docker-compose.tests.yaml up"
   },
   "repository": {
     "type": "git",
@@ -24,8 +27,7 @@
     "solc": "^0.8.4",
     "solidity-docgen": "^0.5.13",
     "truffle": "^5.3.5",
-    "truffle-contract": "^4.0.31",
-    "truffle-hdwallet-provider": "^1.0.17"
+    "truffle-contract": "^4.0.31"
   },
   "devDependencies": {
     "@truffle/hdwallet-provider": "^1.4.0",
