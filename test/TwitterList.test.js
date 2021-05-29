@@ -7,6 +7,25 @@ contract("TweetList", function ([]) {
     this.tweetList = await TwitterList.deployed();
   });
 
+  describe("List tweets", () => {
+    it("Should return counts of inserted tweets", async () => {
+      // given
+      let tweetOne =
+        "Tesla is not going to use accept bitcoin for trading purpose";
+      result = await this.tweetList.insertTweet(tweetOne);
+
+      let tweenTwo =
+        "Elon musk tweet had lost billion dolloar economy in bitcoin market";
+      result = await this.tweetList.insertTweet(tweenTwo);
+
+      // when
+      count = await this.tweetList.count.call();
+
+      // then
+      assert.isAbove(count.toNumber(), 0);
+    });
+  });
+
   describe("Insert Tweet", () => {
     it("should insert tweet", async () => {
       // given
@@ -14,6 +33,7 @@ contract("TweetList", function ([]) {
 
       // when
       result = await this.tweetList.insertTweet(txt);
+      data = await this.tweetList.tweets.call([1]);
 
       // then
       assert.equal(result.logs[0].args.txt, txt);
