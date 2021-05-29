@@ -14,7 +14,7 @@ contract TwitterList {
      */
     event TwitterCreated(int256 id, string txt);
 
-     /**
+    /**
      * @dev event to notify twitter update
      * @param id tweet id
      * @param txt tweet
