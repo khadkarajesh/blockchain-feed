@@ -1,9 +1,9 @@
-# blockchain-feed
-Blockchain application built on Ethereum
-
-## About The Project
-
-This project is build to study and apply the twitter clone 
+# Twitter Feed
+Twitter clone application which consists following features
+- Listing of tweets
+- Creation of tweet
+- Deletion of tweet
+- Insertation of tweet
 
 ## Built With
 
@@ -13,24 +13,6 @@ Solc
 Truffle
 Truffle-contract
 
-## Getting Started
-
-## Prerequisites
-
-## Installation
-
-## Usage
-
-## Commands
-
-### cz-smartcontracts
-
-Cryptozombies smart contracts
-
-For EPITA 2020-2021 class
-
----
-
 ### Docker commands
 
 - Run `docker-compose -p cz-test -f docker-compose.tests.yml up` to run all tests
@@ -39,8 +21,8 @@ For EPITA 2020-2021 class
 Deployment will require you to have a `.env` file with the following content:
 
 ```
-ropsten_infura_apikey = "YourInfuraApiKey"
-ropsten_mnemonic = "your mnemonic provided by metamask"
+ENFURA_KEY = "YourInfuraApiKey"
+MNEMONIC_KEY = "your mnemonic provided by metamask"
 ```
 
 ---
@@ -51,14 +33,6 @@ This may require additional global npm installations, but here's an indication o
 
 - `npm install -g truffle && npm install -g ganache-cli`
 - `npm install`
-
-If you plan to work on the code, you may also want to install additional plugins on VSCode or your favourite IDE:
-
-- Prettier: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-- ESLint: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-- Solidity: https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity
-
-Note that this last linter may pose some issues.
 
 ---
 
