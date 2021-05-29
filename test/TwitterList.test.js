@@ -20,10 +20,9 @@ contract("TweetList", function ([]) {
 
       // when
       count = await this.tweetList.count.call();
-      console.log(`data count ${count}`)
 
       // then
-      assert.isAbove(2, 0);
+      assert.isAbove(count.toNumber(), 0);
     });
   });
 

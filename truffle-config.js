@@ -20,9 +20,6 @@
 require('dotenv').config()
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
-const fs = require('fs');
-const mnemonic = fs.readFileSync(".secret").toString().trim();
-
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -60,7 +57,7 @@ module.exports = {
     ropsten: {
       provider: () =>
         new HDWalletProvider(
-          mnemonic,
+          process.env.MNEMONIC_KEY,
           `https://ropsten.infura.io/v3/${process.env.ENFURA_KEY}`
         ),
       network_id: 3, // Ropsten's id
