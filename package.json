@@ -4,7 +4,7 @@
   "description": "Blockchain application built on Ethereum",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx truffle run coverage",
     "docs": "npx solidity-docgen --solc-module solc-0.7",
     "migrate": "truffle migrate --network ropsten",
     "docker:migrate": "docker-compose -p cz-migrate -f docker-compose.migrate.yaml up",

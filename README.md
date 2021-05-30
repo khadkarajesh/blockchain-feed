@@ -57,13 +57,6 @@ To run the test or the migration through Docker:
 - `npm run docker:test`
 - `npm run docker:migrate`
 
-### Troubleshoot
-
-- Update your version of npm
-- Update your version of node
-- Update your version of ganache-cli
-- Update your version of truffle
-
 ---
 
 ### Truffle commands
