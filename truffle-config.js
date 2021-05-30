@@ -39,10 +39,11 @@ module.exports = {
     // options below to some value.
     //
     development: {
-      host: "0.0.0.0", // Localhost (default: none)
-      port: 8545, // Standard Ethereum port (default: none)
-      network_id: "*", // Any network (default: none)
-    },
+			host: process.env.host || "localhost",
+			port: 8545,
+			network_id: "*", // Match any network id,
+			gas: 6721975,
+		},
     // Another network with more advanced options...
     // advanced: {
     // port: 8777,             // Custom port
@@ -66,6 +67,14 @@ module.exports = {
       timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
     },
+
+    coverage: {
+			host: process.env.host || "localhost",
+			network_id: "*",
+			port: 8555, // <-- If you change this, also set the port option in .solcover.js.
+			gas: 0xfffffffffff, // <-- Use this high gas value
+			gasPrice: 0x01, // <-- Use this low gas price
+		},
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
